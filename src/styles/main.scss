@@ -1,0 +1,14 @@
+@import "reset";
+@import "variables";
+
+body{
+  font-family: $font-main;
+}
+.container{
+  width: calc(100vw - 200px);
+  height: 100%;
+  background-color:$bg-color;
+  margin: 0px auto;
+  border-radius: 10px;
+  max-width: 1400px;
+}
