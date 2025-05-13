@@ -3,7 +3,7 @@ import axios from 'axios';
 import styles from "./PokemonList.module.scss";
 import PokemonCard from '../../PokemonCard';
 
-const PokemonList = ({searchTerm}) => {
+const PokemonList = ({searchTerm, selectedType}) => {
  const [pokemonData, setPokemonData] = useState([]);
  const [loading, setLoading] = useState(true);
  const [error, setError] = useState(null);
@@ -35,9 +35,16 @@ const PokemonList = ({searchTerm}) => {
 
  },[])
 
- const filteredData = pokemonData.filter((p)=>{
+ const filteredData = pokemonData
+ .filter((p)=>{
   return  p.name.toLowerCase().includes(searchTerm.toLowerCase());
- });
+ })
+ .filter((p) =>
+    selectedType
+      ? p.types.some((t) => t.type.name === selectedType)
+      : true
+  );
+
   return (
     <>
     {loading && <h3>Loading...</h3>}

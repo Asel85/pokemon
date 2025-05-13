@@ -1,6 +1,43 @@
 .card{
     width: 250px;
     height: 300px;
+    border-radius: 10px;
+
+    .card_img{
     background-color:#f0f0f0;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+     .img{
+    width: 150px;
+    height: auto;
+   }
 }
+
+.card_id{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+
+    p{
+        font-size: 12px;
+    }
+}
+
+.pokemon_types{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    align-items: start;
+    margin-top: 10px;
+
+    .pokemonName{
+        font-size: 20px;
+        font-weight: 800;
+    }
+}
+  
+}
+
