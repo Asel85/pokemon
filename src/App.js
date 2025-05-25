@@ -3,7 +3,7 @@ import Header from "./components/Header"
 import SearchPokemon from "./components/SearchPokemon";
 import { useState } from "react";
 import PokemonList from "./components/PokemonList";
-import TypeFilter from "./TypeFilter";
+import TypeFilter from "./components/TypeFilter";
 
 function App() {
 
